@@ -176,8 +176,23 @@ content="width=device-width, initial-scale=1.0">
 <div class="product-card">
 
 
-<div class="product-icon">
-    🛍️
+<div class="product-image">
+
+    <?php if (!empty($product["image"])): ?>
+
+        <img
+            src="images/<?php echo htmlspecialchars($product["image"]); ?>"
+            alt="<?php echo htmlspecialchars($product["name"]); ?>"
+        >
+
+    <?php else: ?>
+
+        <div class="no-image">
+            🛍️
+        </div>
+
+    <?php endif; ?>
+
 </div>
 
 
